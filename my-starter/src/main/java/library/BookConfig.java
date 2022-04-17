@@ -9,25 +9,25 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackageClasses = BookConfig.class)
 public class BookConfig {
     @Bean
-    @ConditionalOnProperty(value = "book.type", havingValue = "fantasy")
+    @ConditionalOnProperty(value = "book.type", havingValue = "fantasyBook")
     IBook fantasy() {
         return new Fantasy();
     }
 
     @Bean
-    @ConditionalOnProperty(value = "book.type", havingValue = "drama")
+    @ConditionalOnProperty(value = "book.type", havingValue = "dramaBook")
     IBook drama() {
         return new Drama();
     }
 
     @Bean
-    @ConditionalOnProperty(value = "book.type", havingValue = "history")
+    @ConditionalOnProperty(value = "book.type", havingValue = "historyBook")
     IBook history() {
         return new History();
     }
 
     @Bean
-    @ConditionalOnProperty(value = "book.type", havingValue = "science")
+    @ConditionalOnProperty(value = "book.type", havingValue = "scienceBook")
     IBook science() {
         return new Science();
     }
